@@ -35,30 +35,32 @@ const LoginPage: React.FC = () => {
                   background: item?.title?.includes("Astonishing")
                     ? "lightgreen"
                     : item?.title?.includes("Be hooked")
-                    ? "coral"
-                    : item?.title?.includes("best things in life")
-                    ? "slateblue"
-                    : item?.title?.includes("thump never ends")
-                    ? "darkorange"
-                    : item?.title?.includes("Being globally you")
-                    ? "indianred"
-                    : item?.title?.includes("For the wise") && "skyblue",
+                      ? "coral"
+                      : item?.title?.includes("best things in life")
+                        ? "slateblue"
+                        : item?.title?.includes("thump never ends")
+                          ? "darkorange"
+                          : item?.title?.includes("Being globally you")
+                            ? "indianred"
+                            : item?.title?.includes("For the wise") && "skyblue",
                 }}
               >
-                {item?.title?.includes("Astonishing") && (
-                  <div
-                    style={{
-                      textAlign: "justify",
-                      width: "100%",
-                      marginLeft: "20px",
-                    }}
-                  >
+                <div
+                  style={{
+                    textAlign: "justify",
+                    width: "100%",
+                    marginLeft: "20px",
+                  }}
+                >
+                  {item?.title?.includes("Astonishing") ? (
                     <img
                       className="logo"
                       src="https://krds-assignment.github.io/aoc/api-assets/logo-aoc.png"
                     />
-                  </div>
-                )}
+                  ):(
+                    <div>{" "}<br/><br/></div>
+                  )}
+                </div>
                 <div className="brand-container">
                   <div className="child-container">
                     <div className="content">
